@@ -7,5 +7,10 @@
  * Sobrescribe el método de información para incluir este dato.
  */
 
+include "./clases/Vehiculo.php";
+include "./clases/Coche.php";
+
+$mi_coche = new Coche("Seat", "A150", "1990", "4"); 
+echo $mi_coche->obtenerInformacion();
 
 ?>
