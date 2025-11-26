@@ -1,31 +1,27 @@
 <?php
 
-/**
- * Ejercicio 4: Property Hooks (PHP 8.4)
- * Crea una clase Empleado con property hooks para:
- * • Validar que el salario sea mayor a 0
- * • Convertir el nombre a mayúsculas al leerlo
- * • Calcular el salario anual automáticamente
- */
-
 class Empleado {
     public string $nombre {
-        get => strtoupper($this->nombre); // Devuelve el nombre en mayúsculas
+        get => strtoupper($this->nombre); 
     }
 
-    public float $salario {
+    public float $salario_anual = 0; // 0 por defecto
+
+    public float $salario = 0 {
         set(float $cantidad) {
             if ($cantidad < 0) {
                 throw new Exception("El salario no puede ser negativo");
             }
 
             $this->salario = $cantidad;
+            $this->salario_anual = $this->salario * 12;
         }
     }
 
-
-
-
+    public function __construct($nombre="Desconocido") {
+        // El nombre es "Desconocido" si no se especifica en el constructor
+        $this->nombre = $nombre;
+    }
 }
 
 ?>

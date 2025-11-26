@@ -8,7 +8,7 @@
  * - Validaciones: no permitir saldo negativo
  */
 
-include 'clases/CuentaBancaria.php';
+include "./clases/CuentaBancaria.php";
 
 $mi_cuenta = new CuentaBancaria();
 
