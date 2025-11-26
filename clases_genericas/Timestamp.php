@@ -5,6 +5,8 @@ trait Timestamp {
     public string $fecha_modificacion = "";
 
     public function marcarCreacion() {
+        // Uso == "" porque si la declaro nula y luego aquí intento is_null() me da error:
+        // PHP Fatal error:  Uncaught Error: Typed property Articulo::$fecha_creacion must not be accessed before initialization
         if ($this->fecha_creacion == "") {
             $this->fecha_creacion = date("Y-m-d H:i:s");
             $this->fecha_modificacion = $this->fecha_creacion;
