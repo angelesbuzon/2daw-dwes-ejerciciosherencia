@@ -6,7 +6,7 @@
  * Incluye un constructor y un método para mostrar la información completa del vehículo.
  */
 
-include 'clases/Vehiculo.php';
+include './clases_genericas/Vehiculo.php';
 
 $mi_coche = new Vehiculo("Toyota", "S100", "2005");
 

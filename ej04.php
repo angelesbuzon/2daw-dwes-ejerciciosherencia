@@ -8,7 +8,7 @@
  * • Calcular el salario anual automáticamente
  */
 
-include "./clases/Empleado.php";
+include "./clases_genericas/Empleado.php";
 
 try {
     $primer_empleado = new Empleado();

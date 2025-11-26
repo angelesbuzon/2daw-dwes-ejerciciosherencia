@@ -5,9 +5,9 @@
  * Define una interfaz Calculable con métodos calcularArea() y calcularPerimetro(). Implementa esta interfaz en clases Rectangulo y Circulo.
  */
 
-include "./clases/Calculable.php";
-include "./clases/Rectangulo.php";
-include "./clases/Circulo.php";
+include "./clases_genericas/Calculable.php";
+include "./clases_genericas/Rectangulo.php";
+include "./clases_genericas/Circulo.php";
 
 $rectangulito = new Rectangulo(5, 2.5);
 echo "Área de mi rectangulito: " . $rectangulito->calcularArea() . "\n";

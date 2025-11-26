@@ -9,9 +9,9 @@
  * Crea clases Triangulo y Cuadrado que hereden de Figura.
  */
 
-include "./clases/Figura.php";
-include "./clases/Triangulo.php";
-include "./clases/Cuadrado.php";
+include "./clases_genericas/Figura.php";
+include "./clases_genericas/Triangulo.php";
+include "./clases_genericas/Cuadrado.php";
 
 $mi_triangulo = new Triangulo(2.5, 5, "naranja");
 echo "Área de mi triángulo: " . $mi_triangulo->calcularArea() . "\n";
